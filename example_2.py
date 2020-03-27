@@ -9,5 +9,5 @@ if __name__ == "__main__":
         for c in range(width):
             img[r, c][0] = 0
             img[r, c][1] = img[r, c, 1]
-            img[r, c][2] = 0 
+            img[r, c][2] = 128 
     imageio.imwrite("altered_py.png", img)
