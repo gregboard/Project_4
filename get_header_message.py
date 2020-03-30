@@ -17,7 +17,6 @@ if __name__ == "__main__":
                  chars.append(str(img[r,c,2] & 1))
                  count += 1
       temp = "".join(chars)
-      temp = temp[0 : 31]
       header = int(temp, 2)
       print("The length of the message is: ")
       print(header)
@@ -30,13 +29,14 @@ if __name__ == "__main__":
       count = 0
       for r in range(height):
           for c in range(width):
-              if count < 8:
+              if count < 32:
                  chars.append(str(img[r,c,0] & 1))
                  chars.append(str(img[r,c,1] & 1))
                  chars.append(str(img[r,c,2] & 1))
-                 chars.append(str(img[r,c,3] & 1))
+                 #chars.append(str(img[r,c,3] & 1))
                  count += 1
       temp = "".join(chars)
+      temp = temp[0 : 31]
       header = int(temp, 2)
       print("The length of the message is: ")
       print(header)
