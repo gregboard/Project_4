@@ -33,24 +33,16 @@ if __name__ == "__main__":
                  chars.append(str(img[r,c,2] & 1))
                  #chars.append(str(img[r,c,3] & 1))
                  count += 1
-      temp = "".join(chars)
-      temp2 = temp[0 : 32]
-      print(temp2)
-      header = int(temp2, 2)
-      print("The length of the message is: ")
-      print(header)
+      entire = "".join(chars)
+      header = entire[0 : 32]
+      header = int(header, 2)
 
-    message_binary = temp[32 : (32 + (header * 8))]
-
-    print(message_binary)
-
+    message_binary = entire[32 : (32 + (header * 8))]
     str_data = ' '
 
     for i in range(0, len(message_binary), 8): 
       temp_data = message_binary[i:i + 8] 
       decimal_data = int(temp_data, 2) 
       str_data = str_data + chr(decimal_data) 
-
-    #message = "".join([chr(int(binary, 2)) for binary in message_binary.split(" ")])
     print("The message is: ")
     print (str_data)
