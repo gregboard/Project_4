@@ -38,12 +38,9 @@ if __name__ == "__main__":
     chars = []
     for r in range(height):
         for c in range(width):
-               chars.append(str(img[r,c,0] & 1))
-               chars.append(str(img[r,c,0] & 10))     
-               chars.append(str(img[r,c,1] & 1))
-               chars.append(str(img[r,c,1] & 10))
-               chars.append(str(img[r,c,2] & 1))
-               chars.append(str(img[r,c,2] & 10))
+               chars.append(str(img[r,c,0] & 3))
+               chars.append(str(img[r,c,1] & 3))
+               chars.append(str(img[r,c,2] & 3))
     entire = "".join(chars)
     header = entire[0 : 32]
     header = int(header, 2)
@@ -68,16 +65,16 @@ if __name__ == "__main__":
 ######################################################################################################################################################################################################
 
 
-    #If it searches just the first 3 channels
+    #If it searches all 4 channels
 
     print("IF IT SEARCHES ALL 4 CHANNELS: ")
     chars = []
     for r in range(height):
         for c in range(width):
-               chars.append(str(img[r,c,0] & 1))
-               chars.append(str(img[r,c,1] & 1))
-               chars.append(str(img[r,c,2] & 1))
-               chars.append(str(img[r,c,3] & 1))
+            chars.append(str(img[r,c,0] & 1))
+            chars.append(str(img[r,c,1] & 1))
+            chars.append(str(img[r,c,2] & 1))
+            chars.append(str(img[r,c,3] & 1))
     entire = "".join(chars)
     header = entire[0 : 32]
     header = int(header, 2)
@@ -102,14 +99,10 @@ if __name__ == "__main__":
     chars = []
     for r in range(height):
         for c in range(width):
-               chars.append(str(img[r,c,0] & 1))
-               chars.append(str(img[r,c,0] & 10))     
-               chars.append(str(img[r,c,1] & 1))
-               chars.append(str(img[r,c,1] & 10))
-               chars.append(str(img[r,c,2] & 1))
-               chars.append(str(img[r,c,2] & 10))
-               chars.append(str(img[r,c,3] & 1))
-               chars.append(str(img[r,c,3] & 10))
+               chars.append(str(img[r,c,0] & 3))
+               chars.append(str(img[r,c,1] & 3))
+               chars.append(str(img[r,c,2] & 3))
+               chars.append(str(img[r,c,3] & 3))
     entire = "".join(chars)
     header = entire[0 : 32]
     header = int(header, 2)
