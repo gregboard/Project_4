@@ -93,24 +93,38 @@ if __name__ == "__main__":
 
     #transfers the message if we are including opacity
     else:
-      begin = 64
-      end = 72
-      for r in range(h):
-          for c in range(w):
-              img[r, c][0] = int(entire[begin : end], 2)
-              begin = begin + 8
-              end = end + 8
+      begin = 0
+      for r in range(height):
+          for c in range(width):
+              if entire[begin] == '1':
+                insert = 11111111
+              else:
+                insert = 00000000
+              img[r, c][0] = insert
+              begin = begin + 1
 
-              img[r, c][1] = int(entire[begin : end], 2)
-              begin = begin + 8
-              end = end + 8
+              if entire[begin] == '1':
+                insert = 11111111
+              else:
+                insert = 00000000
+              img[r, c][1] = insert
+              begin = begin + 1
 
-              img[r, c][2] = int(entire[begin : end], 2)
-              begin = begin + 8
-              end = end + 8
+              if entire[begin] == '1':
+                insert = 11111111
+              else:
+                insert = 00000000
+              img[r, c][2] = insert
+              begin = begin + 1
 
-              img[r, c][3] = int(entire[begin : end], 2)
-              begin = begin + 8
-              end = end + 8
+              if entire[begin] == '1':
+                insert = 11111111
+              else:
+                insert = 00000000
+              img[r, c][3] = insert
+              begin = begin + 1
+
+      print("check test.png for the image")
+      imageio.imwrite("test.png", img)
       print("check test.png for the image")
       imageio.imwrite("test.png", img)
