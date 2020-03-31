@@ -111,10 +111,9 @@ if __name__ == "__main__":
                chars.append(str(img[r,c,3] & 1))
                chars.append(str(img[r,c,3] & 10))
     entire = "".join(chars)
-    h = entire[0 : 32]
-    w = entire[32 : 64]
-    h = int(h, 2)
-    w = int(w, 2)
+    header = entire[0 : 32]
+    header = int(header, 2)
+
 
     #gets the message from the least 2 sig bits
     message_binary = entire[32 : (32 + (header * 8))]
