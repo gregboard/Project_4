@@ -28,6 +28,16 @@ def extract_message(raw_message):
 # USAGE: get_header.py file_name header_size num_sig_bits uses_alpha
 if __name__ == "__main__":
 
+    # check for proper number of args
+    if (len(sys.argv) != 5):
+        print("This program takes four arguments")
+        print("1. The file name")
+        print("2. The size of the message header")
+        print("3. The number of least significant bits in each color channel that hold the message")
+        print("4. A boolean declaring if the alpha channel holds some of the message or not")
+        print("USAGE: get_header.py file_name header_size num_sig_bits uses_alpha")
+        sys.exit(0)
+
     # read in args
     file_name = sys.argv[1]
     header_size = int(sys.argv[2])
