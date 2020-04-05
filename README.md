@@ -8,6 +8,6 @@ WinkyFace
 
 ## Files that have been checked
 **Brothers_small**\
-*Args used* header_size: 32 num_sig_bits: 1 uses_alpha: False\
+**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha:* False\
 **Text?** Yes\
 **Image?** No
