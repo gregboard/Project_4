@@ -7,6 +7,6 @@ WideDogIsWide\
 WinkyFace
 
 ## Files that have been checked
-**Brothers_small**
+**Brothers_small**\
 **Text?** Yes\
 **Image?** No
