@@ -64,13 +64,13 @@ if __name__ == "__main__":
 
     # get the image to be output
     raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
-    # output_image = extract_image(raw_message, message_height, message_width, header_size)
+    output_image = extract_image(raw_message, message_height, message_width, header_size)
     
     # write the output file
     output_name_terms = ("output", sys.argv[2], sys.argv[3], sys.argv[4])
     output_name_type_and_terms = (("_".join(output_name_terms)), "png")
     output_file_name = ".".join(output_name_type_and_terms)
-    # imageio.imwrite(output_file_name, output_image)
+    imageio.imwrite(output_file_name, output_image)
 
     #print the message
     print("The given argument values are:")
