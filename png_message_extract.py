@@ -29,12 +29,13 @@ def extract_message(raw_message):
 if __name__ == "__main__":
 
     # check for proper number of args
-    if (len(sys.argv) != 5):
+    if (len(sys.argv) != 6):
         print("This program takes four arguments")
         print("1. The file name")
         print("2. The size of the message header")
         print("3. The number of least significant bits in each color channel that hold the message")
         print("4. A boolean declaring if the alpha channel holds some of the message or not")
+        print("5. A boolean declaring if the message is skipping 1000 characters after the header or not")
         print("USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha")
         sys.exit(0)
 
@@ -43,6 +44,7 @@ if __name__ == "__main__":
     header_size = int(sys.argv[2])
     num_sig_bits = int(sys.argv[3])
     uses_alpha = eval(sys.argv[4])
+    plus_thousand = eval(sys.argv[5])
 
     # parse image and extract height, width, and number of channels
     img = imageio.imread(file_name)
@@ -56,7 +58,12 @@ if __name__ == "__main__":
     message_length = int(raw_header, 2)
 
     # get the final message
-    raw_message = all_message_bits[header_size : (header_size + (message_length * 8))]
+    if plus_thousand:
+        header_size = header_size + 1000
+        raw_message = all_message_bits[header_size : (header_size + (message_length * 8))]
+    else:
+        raw_message = all_message_bits[header_size : (header_size + (message_length * 8))]
+
     message = extract_message(raw_message)
 
     #print the message
@@ -65,6 +72,7 @@ if __name__ == "__main__":
     print("header_size:", header_size)
     print("num_sig_bits:", num_sig_bits)
     print("uses_alpha", uses_alpha)
+    print("plus_thousand", plus_thousand)
     print("The input image has the following dimensions:")
     print("Height:", height)
     print("Width:", width)
