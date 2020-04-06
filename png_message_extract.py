@@ -8,11 +8,11 @@ def get_message_bits(img, height, width, num_sig_bits, uses_alpha):
     bits = []
     for r in range(height):
         for c in range(width):
-            bits.append(str(bin(img[r,c,0] & (2**num_sig_bits)-1)))
-            bits.append(str(bin(img[r,c,1] & (2**num_sig_bits)-1)))
-            bits.append(str(bin(img[r,c,2] & (2**num_sig_bits)-1)))
+            bits.append(bin(img[r,c,0] & (2**num_sig_bits)-1) [2:])
+            bits.append(bin(img[r,c,1] & (2**num_sig_bits)-1) [2:])
+            bits.append(bin(img[r,c,2] & (2**num_sig_bits)-1) [2:])
             if uses_alpha:
-                bits.append(str(bin(img[r,c,3] & (2**num_sig_bits)-1)))
+                bits.append(bin(img[r,c,3] & (2**num_sig_bits)-1) [2:])
     return "".join(bits)
 
 # a method to turn a list of bits into a string
