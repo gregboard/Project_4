@@ -103,6 +103,8 @@ if __name__ == "__main__":
         message = ''
         print(file_name)
         if message_height < 50000:
+            if plus_thousand:
+                raw_message = raw_message + 1000
             raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
             output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
@@ -237,6 +239,8 @@ if __name__ == "__main__":
     message = ''
     print(file_name)
     if message_height < 50000:
+        if plus_thousand:
+            raw_message = raw_message + 1000
         raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
         output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
@@ -378,6 +382,8 @@ if __name__ == "__main__":
         message = ''
         print(file_name)
         if message_height < 50000:
+            if plus_thousand:
+                raw_message = raw_message + 1000
             raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
             output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
@@ -510,6 +516,8 @@ if __name__ == "__main__":
     message = ''
     print(file_name)
     if message_height < 50000:
+        if plus_thousand:
+            raw_message = raw_message + 1000
         raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
         output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
@@ -643,6 +651,8 @@ if __name__ == "__main__":
         message = ''
         print(file_name)
         if message_height < 50000:
+            if plus_thousand:
+                raw_message = raw_message + 1000
             raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
             output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
@@ -786,6 +796,8 @@ if __name__ == "__main__":
         message = ''
         print(file_name)
         if message_height < 50000:
+            if plus_thousand:
+                raw_message = raw_message + 1000
             raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
             output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
@@ -920,6 +932,8 @@ if __name__ == "__main__":
         message = ''
         print(file_name)
         if message_height < 50000:
+            if plus_thousand:
+                raw_message = raw_message + 1000
             raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
             output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
@@ -1052,6 +1066,8 @@ if __name__ == "__main__":
     message = ''
     print(file_name)
     if message_height < 50000:
+        if plus_thousand:
+            raw_message = raw_message + 1000
         raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
         output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
@@ -1185,6 +1201,8 @@ if __name__ == "__main__":
         message = ''
         print(file_name)
         if message_height < 50000:
+            if plus_thousand:
+                raw_message = raw_message + 1000
             raw_message = all_message_bits[header_size : (header_size + (message_height * message_width * 24))]
             output_image = extract_image(raw_message, message_height, message_width, header_size, img)
 
