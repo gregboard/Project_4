@@ -242,6 +242,62 @@
 **Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
 **Meaningful Output?** No\
 **Message Length?** 2257339939\
+\
+\
+**GadgetRadiator**\
+\
+\
+**Grooming**\
+**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
+**Channels** Only blue\
+**Meaningful Output?** Yes\
+\
+\
+**LastBastionOfRadiance**\
+IMAGE FOUND??\
+\
+\
+**MoJoJoJoCouch**\
+\
+\
+**PupFriends**\
+**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
+**Channels** All\
+**Meaningful Output?** Yes\
+\
+\
+**PuppyLeash**\
+**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
+**Channels** All\
+**Meaningful Output?** Yes\
+\
+\
+**StegTest**\
+\
+\
+**TheGrassIsGreener**\
+\
+\
+**TripleThreat**\
+**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* True\
+**Channels** All\
+**Meaningful Output?** Yes\
+\
+\
+**WideDogIsWide**\
+**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
+**Channels** All\
+**Meaningful Output?** Yes\
+\
+\
+**WinkyFace**\
+IMAGE FOUND\
+\
+\
+**Woof1**\
+**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
+**Channels** Only red\
+**Meaningful Output?** Yes\
 
 
 ## For Images
