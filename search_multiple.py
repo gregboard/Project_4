@@ -15,25 +15,25 @@ def get_message_bits(img, height, width, num_sig_bits, uses_alpha):
         bits = []
         count = 0
         if order == 'BGR':
-            for r in range(height):
-                for c in range(width):
+            for r in range(168):
+                for c in range(190):
                     if count < 100000:
-                        bits.append(bin(img[r,c,2] & (2**num_sig_bits)-1) [2:])
-                        bits.append(bin(img[r,c,1] & (2**num_sig_bits)-1) [2:])
-                        bits.append(bin(img[r,c,0] & (2**num_sig_bits)-1) [2:])
-                        if uses_alpha:
-                            bits.append(bin(img[r,c,3] & (2**num_sig_bits)-1) [2:])
+                        bits.append(str(bin(img[c,r,0] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        bits.append(str(bin(img[c,r,1] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        bits.append(str(bin(img[c,r,2] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        if file_name == 'output_1_0_0.png' or file_name == 'Grooming.png' or file_name == 'TheGrassIsGreener.png':
+                             bits.append(str(bin(img[r,c,3] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
                         count = count + 1
             return "".join(bits)
         if order == 'RGB':
-            for r in range(height):
-                for c in range(width):
+            for r in range(width):
+                for c in range(height):
                     if count < 100000:
-                        bits.append(bin(img[r,c,0] & (2**num_sig_bits)-1) [2:])
-                        bits.append(bin(img[r,c,1] & (2**num_sig_bits)-1) [2:])
-                        bits.append(bin(img[r,c,2] & (2**num_sig_bits)-1) [2:])
-                        if uses_alpha:
-                            bits.append(bin(img[r,c,3] & (2**num_sig_bits)-1) [2:])
+                        bits.append(str(bin(img[c,r,0] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        bits.append(str(bin(img[c,r,1] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        bits.append(str(bin(img[c,r,2] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        if file_name == 'WinkyFace.png' or file_name == 'Grooming.png' or file_name == 'TheGrassIsGreener.png':
+                            bits.append(str(bin(img[c,r,3] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
                         count = count + 1
             return "".join(bits)
 
@@ -60,8 +60,8 @@ if __name__ == "__main__":
         print("4. A boolean declaring if the message is skipping 1000 characters after the header or not")
         print("5. A boolean declaring the order of which pixels the program looks at")
         print("USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha")
-    files = ['Woof1.png', 'WinkyFace.png', 'TheGrassIsGreener.png', 'StegTest.png', 'MoJoJoJoCouch.png', 'LastBastionOfRadiance.png', 'Grooming.png', 'Gadget.png']
-    #files = ['LastBastionOfRadiance.png']
+    #files = ['TheGrassIsGreener.png', 'StegTest.png', 'MoJoJoJoCouch.png', 'Gadget.png']
+    files = ['GadgetRadiator.png']
 
     for i in files:
 
@@ -97,7 +97,7 @@ if __name__ == "__main__":
                 raw_header = all_message_bits[0 : header_size]
                 message_length = int(raw_header, 2)
                 raw_message = all_message_bits[header_size: (header_size + (message_length * 8))]
-
+            print(raw_header)
             message = ''
             print(file_name)
             if message_length < 5000000:
