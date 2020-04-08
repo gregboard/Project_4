@@ -133,6 +133,13 @@ if __name__ == "__main__":
     # turn the channels_used input into an array that can be used later
     channel_array = []
     num_channels = 0
+    # USE
+    # A
+    # LOOP
+    # TO
+    # DO
+    # THIS
+    # AND ALSO PUT ALPHA IN HERE AND GET RID OF USE_ALPHA
     if (channels_used == 'rgb'):
         channel_array = [1, 1, 1]
         num_channels = 3
