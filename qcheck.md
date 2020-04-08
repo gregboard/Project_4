@@ -255,6 +255,8 @@
 \
 **LastBastionOfRadiance**\
 IMAGE FOUND??\
+The image found hides a second image\
+That second image has a message hidden as follows:\
 \
 \
 **MoJoJoJoCouch**\

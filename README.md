@@ -19,7 +19,9 @@ GadgetRadiator to Woof1
 1. The other day I decided to clean my bedsheets for the first time in a long time. I found this bizarre implement under my pillow. Why is it there?\
 So as not to be a fool on the one night it is needed.
 
-2. Who’s Scruffy?
+2. Who’s Scruffy?\
+A blind and deaf bomb sniffing dog who doesn't smell well
+
 3. Should I read the Tao Te Ching, or the Art of War?
 4. I have memories of having a talking shed. What was its name?\
 John
@@ -99,8 +101,9 @@ Give a man a fish, you feed him for a day.\
 Give a fish a man, it'll eat for weeks.\
 \
 \
-**File Name:** \
+**File Name:** LastBastionOfRadiance\
 **Message**\
+
 
 
 ## Images Found
