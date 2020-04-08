@@ -187,6 +187,7 @@ if __name__ == "__main__":
     print("num_sig_bits:", num_sig_bits)
     print("uses_alpha:", uses_alpha)
     print("skip_1000:", skip_1000)
+    print("channels_used:", channels_used)
     print("The extracted header is:")
     print(message_length)
     print("The extracted message is:")
