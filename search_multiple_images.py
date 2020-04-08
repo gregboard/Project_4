@@ -17,25 +17,25 @@ def get_message_bits(img, height, width, num_sig_bits, uses_alpha):
         if order == 'BGR':
             for r in range(height):
                 for c in range(width):
-                    if count < 100000:
-                        bits.append(bin(img[r,c,0] & (128)) [2:])
-                        #bits.append(bin(img[r,c,1] & (4)) [2:])
-                        #bits.append(bin(img[r,c,2] & (4)) [2:])
-
-                        #if file_name == 'WinkyFace.png' or file_name == 'Grooming.png' or file_name == 'TheGrassIsGreener.png':
-                           # bits.append(bin(img[r,c,3] & (4)) [2:])
+                    if count < 10000000:
+                        bits.append(str(((img[c,r,0]) & (1 << (num_sig_bits-1))) >> (num_sig_bits-1)))
+                        bits.append(str(((img[c,r,1]) & (1 << (num_sig_bits-1))) >> (num_sig_bits-1)))
+                        bits.append(str(((img[c,r,2]) & (1 << (num_sig_bits-1))) >> (num_sig_bits-1)))
+                        if file_name == 'output_2_0_0.png' or file_name == 'Grooming.png' or file_name == 'TheGrassIsGreener.png':
+                             bits.append(str(bin(img[c,r,3] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                            #bits.append(str((img[r,c,3]) & (1 << (num_sig_bits-1)) >> (num_sig_bits-1)))
 
                         count = count + 1
             return "".join(bits)
         if order == 'RGB':
-            for r in range(height):
-                for c in range(width):
-                    if count < 100000:
-                        bits.append(bin(img[r,c,0] & (2**num_sig_bits)-1) [2:])
-                        bits.append(bin(img[r,c,1] & (2**num_sig_bits)-1) [2:])
-                        bits.append(bin(img[r,c,2] & (2**num_sig_bits)-1) [2:])
-                        if file_name == 'WinkyFace.png' or file_name == 'Grooming.png' or file_name == 'TheGrassIsGreener.png':
-                            bits.append(bin(img[r,c,3] & (2**num_sig_bits)-1) [2:])
+            for c in range(width):
+                for r in range(height):
+                    if count < 10000:
+                        bits.append(str(bin(img[c,r,0] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        bits.append(str(bin(img[c,r,1] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        bits.append(str(bin(img[c,r,2] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
+                        if file_name == 'WF2.png' or file_name == 'Grooming.png' or file_name == 'TheGrassIsGreener.png':
+                            bits.append(str(bin(img[c,r,3] & (2**num_sig_bits)-1) [2:]).zfill(num_sig_bits))
                         count = count + 1
             return "".join(bits)
 
@@ -45,6 +45,7 @@ def extract_image(raw_message, message_height, message_width, header_size, img):
     image_data = img#np.ndarray((message_height, message_width, 4))
     # get the hidden image
     begin = header_size
+    print(len(raw_message))
     for r in range(message_height):
     	for c in range(message_width):
             if begin + 8 < len(raw_message):
@@ -72,8 +73,8 @@ if __name__ == "__main__":
         print("5. A boolean declaring the order of which pixels the program looks at")
         print("USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha")
         sys.exit(0)
-    files = ['Woof1.png', 'WinkyFace.png', 'TheGrassIsGreener.png', 'StegTest.png', 'MoJoJoJoCouch.png', 'LastBastionOfRadiance.png', 'Grooming.png', 'Gadget.png']
-    #files = ['LastBastionOfRadiance.png']
+    #files = ['TheGrassIsGreener.png', 'StegTest.png', 'Gadget.png', 'GadgetRadiator.png']
+    files = ['GadgetRadiator.png']
 
     for i in files:
 
