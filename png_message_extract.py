@@ -3,7 +3,7 @@ import imageio
 import sys
 
 # isolate the header from the pixels of the image
-def get_header_bits(img, header_size, num_sig_bits, uses_alpha, skip_1000, channel_array, num_channels):
+def get_header_bits(img, header_size, num_sig_bits, which_sig_bit, uses_alpha, skip_1000, channel_array, num_channels):
     height, width, channels = img.shape
     bits = []
     count = 0
@@ -14,11 +14,11 @@ def get_header_bits(img, header_size, num_sig_bits, uses_alpha, skip_1000, chann
         for r in range(height):
             for c in range(width):
                 if (channel_array[0] == 1):
-                    bits.append(str(bin((img[r,c,0] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,0] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 if (channel_array[1] == 1):
-                    bits.append(str(bin((img[r,c,1] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,1] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 if (channel_array[2] == 1):
-                    bits.append(str(bin((img[r,c,2] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,2] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 count += num_sig_bits * num_channels
                 if (count > header_size):
                     if skip_1000:
@@ -30,12 +30,12 @@ def get_header_bits(img, header_size, num_sig_bits, uses_alpha, skip_1000, chann
         for r in range(height):
             for c in range(width):
                 if (channel_array[0] == 1):
-                    bits.append(str(bin((img[r,c,0] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,0] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 if (channel_array[1] == 1):
-                    bits.append(str(bin((img[r,c,1] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,1] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 if (channel_array[2] == 1):
-                    bits.append(str(bin((img[r,c,2] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
-                bits.append(str(bin((img[r,c,3] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,2] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,3] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 count += num_sig_bits * (num_channels + 1)
                 if (count > header_size):
                     if skip_1000:
@@ -52,7 +52,7 @@ def get_header_bits(img, header_size, num_sig_bits, uses_alpha, skip_1000, chann
     sys.exit(0)
 
 # isolate the message from the pixels of the image
-def get_message_bits(img, message_length, header_size, num_sig_bits, uses_alpha, skip_1000, channel_array, num_channels):
+def get_message_bits(img, message_length, header_size, num_sig_bits, which_sig_bit, uses_alpha, skip_1000, channel_array, num_channels):
     height, width, channels = img.shape
     bits = []
     count = 0
@@ -63,11 +63,11 @@ def get_message_bits(img, message_length, header_size, num_sig_bits, uses_alpha,
         for r in range(height):
             for c in range(width):
                 if (channel_array[0] == 1):
-                    bits.append(str(bin((img[r,c,0] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,0] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 if (channel_array[1] == 1):
-                    bits.append(str(bin((img[r,c,1] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,1] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 if (channel_array[2] == 1):
-                    bits.append(str(bin((img[r,c,2] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,2] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 count += num_sig_bits * num_channels
                 if (count > (header_size+(message_length*8))):
                     if skip_1000:
@@ -79,12 +79,12 @@ def get_message_bits(img, message_length, header_size, num_sig_bits, uses_alpha,
         for r in range(height):
             for c in range(width):
                 if (channel_array[0] == 1):
-                    bits.append(str(bin((img[r,c,0] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,0] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 if (channel_array[1] == 1):
-                    bits.append(str(bin((img[r,c,1] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,1] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 if (channel_array[2] == 1):
-                    bits.append(str(bin((img[r,c,2] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
-                bits.append(str(bin((img[r,c,3] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                    bits.append(str(bin((img[r,c,2] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,3] >> (which_sig_bit - num_sig_bits)) & (2**num_sig_bits)-1)[2:]).zfill(num_sig_bits))
                 count += num_sig_bits * (num_channels + 1)
                 if (count > (header_size+(message_length*8))):
                     if skip_1000:
@@ -105,11 +105,11 @@ def extract_message(raw_message):
     return str_data
 
 # main program starts here
-# USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha skip_1000 channels_used
+# USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha skip_1000 channels_used which_sig_bit
 if __name__ == "__main__":
 
     # check for proper number of args
-    if (len(sys.argv) != 7):
+    if (len(sys.argv) != 8):
         print("This program takes five arguments")
         print("1. The file name")
         print("2. The size of the message header")
@@ -117,7 +117,8 @@ if __name__ == "__main__":
         print("4. A boolean declaring if the message is hidden in the alpha channel or not")
         print("5. A boolean declaring if the first 1000 bits should be skipped or not")
         print("6. The color channels the message is hidden in")
-        print("USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha skip_1000")
+        print("7. The significant bit to use")
+        print("USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha skip_1000 channels_used which_sig_bit")
         sys.exit(0)
 
     # read in args
@@ -127,6 +128,7 @@ if __name__ == "__main__":
     uses_alpha = eval(sys.argv[4])
     skip_1000 = eval(sys.argv[5])
     channels_used = sys.argv[6]
+    which_sig_bit = int(sys.argv[7])
 
     # turn the channels_used input into an array that can be used later
     channel_array = []
@@ -169,7 +171,7 @@ if __name__ == "__main__":
     img = imageio.imread(file_name)
 
     # isolate the header and convert it into an int
-    raw_header = get_header_bits(img, header_size, num_sig_bits, uses_alpha, skip_1000, channel_array, num_channels)
+    raw_header = get_header_bits(img, header_size, num_sig_bits, which_sig_bit, uses_alpha, skip_1000, channel_array, num_channels)
     message_length = int(raw_header, 2)
     if (message_length > 100000):
         print("The message length found was:", message_length)
@@ -177,7 +179,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
     # isolate the message and convert it into a character string
-    raw_message = get_message_bits(img, message_length, header_size, num_sig_bits, uses_alpha, skip_1000, channel_array, num_channels)
+    raw_message = get_message_bits(img, message_length, header_size, num_sig_bits, which_sig_bit, uses_alpha, skip_1000, channel_array, num_channels)
     message = extract_message(raw_message)
 
     #print the message
@@ -188,6 +190,7 @@ if __name__ == "__main__":
     print("uses_alpha:", uses_alpha)
     print("skip_1000:", skip_1000)
     print("channels_used:", channels_used)
+    print("which_sig_bit:", which_sig_bit)
     print("The extracted header is:")
     print(message_length)
     print("The extracted message is:")
