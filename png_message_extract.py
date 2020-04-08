@@ -2,18 +2,89 @@ import numpy as np
 import imageio
 import sys
 
-# a method to get all of the n least significant bits from each channel
-# of each pixel in the image
-def get_message_bits(img, height, width, num_sig_bits, uses_alpha):
+# isolate the header from the pixels of the image
+def get_header_bits(img, header_size, num_sig_bits, skip_1000):
+    height, width, channels = img.shape
     bits = []
-    for r in range(height):
-        for c in range(width):
-            bits.append(bin(img[r,c,0] & (2**num_sig_bits)-1) [2:])
-            bits.append(bin(img[r,c,1] & (2**num_sig_bits)-1) [2:])
-            bits.append(bin(img[r,c,2] & (2**num_sig_bits)-1) [2:])
-            if uses_alpha:
-                bits.append(bin(img[r,c,3] & (2**num_sig_bits)-1) [2:])
-    return "".join(bits)
+    count = 0
+    if skip_1000:
+        header_size += 1001
+
+    if (channels == 3):
+        for r in range(height):
+            for c in range(width):
+                bits.append(str(bin((img[r,c,0] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,1] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,2] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                count += num_sig_bits * 3
+                if (count > header_size):
+                    if skip_1000:
+                        return "".join(bits)[1001:header_size]
+                    else:
+                        return "".join(bits)[0:header_size]
+
+    elif (channels == 4):
+        for r in range(height):
+            for c in range(width):
+                bits.append(str(bin((img[r,c,0] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,1] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,2] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,3] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                count += num_sig_bits * 4
+                if (count > header_size):
+                    if skip_1000:
+                        return "".join(bits)[1001:header_size]
+                    else:
+                        return "".join(bits)[0:header_size]
+
+    else: 
+        print("The number of channels was incorrect")
+        sys.exit(0)
+
+    print("For some reason the header didn't return from in a loop")
+    sys.exit(0)
+
+# isolate the message from the pixels of the image
+def get_message_bits(img, message_length, header_size, num_sig_bits, skip_1000):
+    height, width, channels = img.shape
+    bits = []
+    count = 0
+    if skip_1000:
+        header_size += 1001
+
+    if (channels == 3):
+        for r in range(height):
+            for c in range(width):
+                bits.append(str(bin((img[r,c,0] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,1] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,2] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                count += num_sig_bits * 3
+                if (count > (header_size+(message_length*8))):
+                    if skip_1000:
+                        return "".join(bits)[header_size:(header_size+(message_length*8))]
+                    else:
+                        return "".join(bits)[header_size:(header_size+(message_length*8))]
+
+    elif (channels == 4):
+        for r in range(height):
+            for c in range(width):
+                bits.append(str(bin((img[r,c,0] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,1] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,2] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                bits.append(str(bin((img[r,c,3] & (2**num_sig_bits)-1))[2:]).zfill(num_sig_bits))
+                count += num_sig_bits * 4
+                if (count > (header_size+(message_length*8))):
+                    if skip_1000:
+                        return "".join(bits)[header_size:(header_size+(message_length*8))]
+                    else:
+                        return "".join(bits)[header_size:(header_size+(message_length*8))]
+
+    else: 
+        print("The number of channels was incorrect")
+        sys.exit(0)
+
+    print("For some reason the message didn't return from in a loop")
+    sys.exit(0)
 
 # a method to turn a list of bits into a string
 def extract_message(raw_message):
@@ -25,45 +96,38 @@ def extract_message(raw_message):
     return str_data
 
 # main program starts here
-# USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha
+# USAGE: png_message_extract.py file_name header_size num_sig_bits skip_1000
 if __name__ == "__main__":
 
     # check for proper number of args
-    if (len(sys.argv) != 6):
+    if (len(sys.argv) != 5):
         print("This program takes four arguments")
         print("1. The file name")
         print("2. The size of the message header")
         print("3. The number of least significant bits in each color channel that hold the message")
-        print("4. A boolean declaring if the alpha channel holds some of the message or not")
-        print("5. A boolean declaring if the message is skipping 1000 characters after the header or not")
-        print("USAGE: png_message_extract.py file_name header_size num_sig_bits uses_alpha")
+        print("4. A boolean declaring if the first 1000 bits should be skipped or not")
+        print("USAGE: png_message_extract.py file_name header_size num_sig_bits skip_1000")
         sys.exit(0)
 
     # read in args
     file_name = sys.argv[1]
     header_size = int(sys.argv[2])
     num_sig_bits = int(sys.argv[3])
-    uses_alpha = eval(sys.argv[4])
-    plus_thousand = eval(sys.argv[5])
+    skip_1000 = eval(sys.argv[4])
 
     # parse image and extract height, width, and number of channels
     img = imageio.imread(file_name)
-    height, width, channels = img.shape
-
-    # isolate the n least significant bits from each channel of each pixel
-    all_message_bits = get_message_bits(img, height, width, num_sig_bits, uses_alpha)
 
     # isolate the header and convert it into an int
-    raw_header = all_message_bits[0 : header_size]
+    raw_header = get_header_bits(img, header_size, num_sig_bits, skip_1000)
     message_length = int(raw_header, 2)
+    if (message_length > 100000):
+        print("The message length found was:", message_length)
+        print("This doesn't seem right")
+        sys.exit(0)
 
-    # get the final message
-    if plus_thousand:
-        header_size = header_size + 1000
-        raw_message = all_message_bits[header_size : (header_size + (message_length * 8))]
-    else:
-        raw_message = all_message_bits[header_size : (header_size + (message_length * 8))]
-
+    # isolate the message and convert it into a character string
+    raw_message = get_message_bits(img, message_length, header_size, num_sig_bits, skip_1000)
     message = extract_message(raw_message)
 
     #print the message
@@ -71,12 +135,7 @@ if __name__ == "__main__":
     print("file_name:", file_name)
     print("header_size:", header_size)
     print("num_sig_bits:", num_sig_bits)
-    print("uses_alpha", uses_alpha)
-    print("plus_thousand", plus_thousand)
-    print("The input image has the following dimensions:")
-    print("Height:", height)
-    print("Width:", width)
-    print("Channels:", channels)
+    print("plus_1000:", skip_1000)
     print("The extracted header is:")
     print(message_length)
     print("The extracted message is:")
