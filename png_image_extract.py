@@ -211,7 +211,10 @@ if __name__ == "__main__":
     raw_header = get_header_bits(img, header_size, num_sig_bits, which_sig_bits, skip_1000, channel_array, flip)
     message_height = int(raw_header[0 : 32], 2)
     message_width = int(raw_header[32 : 64], 2)
-    if (message_height > 100000 or message_width > 100000):
+    print("The message height found was:", message_height)
+    print("The message width found was:", message_width)
+    sys.exit(0)
+    if (message_height > 10000 or message_width > 10000):
         print("The message height found was:", message_height)
         print("The message width found was:", message_width)
         print("This doesn't seem right")
@@ -219,7 +222,7 @@ if __name__ == "__main__":
 
     # get the image to be output
     raw_message = get_message_bits(img, (message_height*message_width), header_size, num_sig_bits, which_sig_bits, skip_1000, channel_array, flip)
-    output_image = extract_image(img, raw_message, message_height, message_width, header_size, uses_alpha, skip_1000)
+    output_image = extract_image(img, raw_message, message_height, message_width, header_size, channel_array, skip_1000)
     
     # write the output file
     output_name_terms = ("output", sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])

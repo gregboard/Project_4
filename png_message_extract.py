@@ -173,7 +173,7 @@ if __name__ == "__main__":
     # isolate the header and convert it into an int
     raw_header = get_header_bits(img, header_size, num_sig_bits, which_sig_bits, skip_1000, channel_array, flip)
     message_length = int(raw_header, 2)
-    if (message_length > 100000):
+    if (message_length > 10000):
         print("The message length found was:", message_length)
         print("This doesn't seem right")
         sys.exit(0)

@@ -22,7 +22,7 @@
 32 1 False True rgb 1\
 32 1 False True rgb 2\
 *Image Found*\
-32 1 False False r 1\
+64 1 False False r 1\
 **Checking the Image Found:**\
 32 1 1 rgb False False
 32 1 1 rgb False True
@@ -479,6 +479,11 @@
 \
 \
 **GadgetRadiator**\
+*Possible Encryped Message??*\
+32 1 1 rgb False True\
+*Possible Encrypted Message??*\
+32 1 3 gb True True\
+^^ ended at this\
 \
 \
 **Grooming**\
@@ -488,12 +493,12 @@
 \
 **LastBastionOfRadiance**\
 *Image Found*\
-32 1 False True rgb 1\
+64 1 False True rgb 1\
 \
 \
 **MoJoJoJoCouch**\
 *Image Found*\
-32 1 False False rgb 1 True
+64 1 False False rgb 1 True
 \
 \
 **PupFriends**\
@@ -511,7 +516,7 @@
 \
 **TheGrassIsGreener**\
 *Image Found*
-32 1 1 rgb False True
+64 1 1 rgb False True
 \
 \
 **TripleThreat**\
@@ -526,7 +531,7 @@
 \
 **WinkyFace**\
 *Image Found*\
-32 2 False False rgb 2\
+64 2 False False rgb 2\
 \
 \
 **Woof1**\
