@@ -1,305 +1,537 @@
 # Files Checked
 ## For Text
 **AlbumCover**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 1637882437\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 3164718730\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 3485828578\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1309106324\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 2452388225\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 4189180921\
+**Args Checked**\
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+*Message Found*\
+32 1 False False r 1\
 \
 \
 **Brothers_small**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** Yes\
+*Message Found*\
+32 1 False False rgb 1\
 \
 \
 **Brothers**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 859271989\
+**Args Checked**\
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 1 False True rgb 2\
+*Image Found*\
+32 1 False False r 1\
+**Checking the Image Found:**\
+32 1 1 rgb False False
+32 1 1 rgb False True
+32 1 1 rgb True False
+32 1 1 rgb True True
+32 1 1 r False False
+32 1 1 r False True
+32 1 1 r True False
+32 1 1 r True True
+32 1 1 g False False
+32 1 1 g False True
+32 1 1 g True False
+32 1 1 g True True
+32 1 1 b False False
+32 1 1 b False True
+32 1 1 b True False
+32 1 1 b True True
+32 1 1 rg False False
+32 1 1 rg False True
+32 1 1 rg True False
+32 1 1 rg True True
+32 1 1 rb False False
+32 1 1 rb False True
+32 1 1 rb True False
+32 1 1 rb True True
+32 1 1 gb False False
+32 1 1 gb False True
+32 1 1 gb True False
+32 1 1 gb True True
 
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 117934007\
+32 2 2 rgb False False
+32 2 2 rgb False True
+32 2 2 rgb True False
+32 2 2 rgb True True
+32 2 2 r False False
+32 2 2 r False True
+32 2 2 r True False
+32 2 2 r True True
+32 2 2 g False False
+32 2 2 g False True
+32 2 2 g True False
+32 2 2 g True True
+32 2 2 b False False
+32 2 2 b False True
+32 2 2 b True False
+32 2 2 b True True
+32 2 2 rg False False
+32 2 2 rg False True
+32 2 2 rg True False
+32 2 2 rg True True
+32 2 2 rb False False
+32 2 2 rb False True
+32 2 2 rb True False
+32 2 2 rb True True
+32 2 2 gb False False
+32 2 2 gb False True
+32 2 2 gb True False
+32 2 2 gb True True
 
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 49295170\
+32 1 2 rgb False False
+32 1 2 rgb False True
+32 1 2 rgb True False
+32 1 2 rgb True True
+32 1 2 r False False
+32 1 2 r False True
+32 1 2 r True False
+32 1 2 r True True
+32 1 2 g False False
+32 1 2 g False True
+32 1 2 g True False
+32 1 2 g True True
+32 1 2 b False False *header of 8755*
+32 1 2 b False True
+32 1 2 b True False
+32 1 2 b True True
+32 1 2 rg False False
+32 1 2 rg False True
+32 1 2 rg True False
+32 1 2 rg True True
+32 1 2 rb False False
+32 1 2 rb False True
+32 1 2 rb True False
+32 1 2 rb True True
+32 1 2 gb False False
+32 1 2 gb False True
+32 1 2 gb True False
+32 1 2 gb True True
 
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 573482659\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 2138996607\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 3743475758\
 \
 \
 **DogDog**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 1213289\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 2183791012\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 3525358096\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1074007472\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1226772066\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 691715408\
+**Args Checked**\
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+*Message Found*
+32 1 False False r 1
 \
 \
 **ExtraCredit**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 3816931583\
+**Args Checked**\
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+32 1 False False r 1\
+32 2 False False r 2\
+32 1 False True r 1\
+32 2 False True r 2\
+32 1 False False g 1\
+32 2 False False g 2\
+32 1 False True g 1\
+32 2 False True g 2\
+32 1 False False b 1\
+32 2 False False b 2\
+32 1 False True b 1\
+32 2 False True b 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 1453681321\
+32 1 False False rg 1\
+32 2 False False rg 2\
+32 1 False True rg 1\
+32 2 False True rg 2\
+32 1 False False rb 1\
+32 2 False False rb 2\
+32 1 False True rb 1\
+32 2 False True rb 2\
+32 1 False False gb 1\
+32 2 False False gb 2\
+32 1 False True gb 1\
+32 2 False True gb 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 648382907\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 4022854654\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 3835378164\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 4010331452\
+32 1 False False rgb 2\
+32 1 False True rgb 2\
+32 1 False False r 2\
+32 1 False True r 2\
+32 1 False False g 2\
+32 1 False True g 2\
+32 1 False False b 2\
+32 1 False True b 2\
+32 1 False False rg 2\
+32 1 False True rg 2\
+32 1 False False rb 2\
+32 1 False True rb 2\
+32 1 False False gb 2\
+32 1 False True gb 2\
 \
 \
 **Floof**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 413492856\
+**Args Checked**\
+**Regular**
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+32 1 False False r 1\
+32 2 False False r 2\
+32 1 False True r 1\
+32 2 False True r 2\
+32 1 False False g 1\
+32 2 False False g 2\
+32 1 False True g 1\
+32 2 False True g 2\
+32 1 False False b 1\
+32 2 False False b 2\
+32 1 False True b 1\
+32 2 False True b 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 2336812569\
+32 1 False False rg 1\
+32 2 False False rg 2\
+32 1 False True rg 1\
+32 2 False True rg 2\
+32 1 False False rb 1\
+32 2 False False rb 2\
+32 1 False True rb 1\
+32 2 False True rb 2\
+32 1 False False gb 1\
+32 2 False False gb 2\
+32 1 False True gb 1\
+32 2 False True gb 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 3245551721\
+32 1 False False rgb 2\
+32 1 False True rgb 2\
+32 1 False False r 2\
+32 1 False True r 2\
+32 1 False False g 2\
+32 1 False True g 2\
+32 1 False False b 2\
+32 1 False True b 2\
+32 1 False False rg 2\
+32 1 False True rg 2\
+32 1 False False rb 2\
+32 1 False True rb 2\
+32 1 False False gb 2\
+32 1 False True gb 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 3817330442\
+**Flipped**
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+32 1 False False r 1\
+32 2 False False r 2\
+32 1 False True r 1\
+32 2 False True r 2\
+32 1 False False g 1\
+32 2 False False g 2\
+32 1 False True g 1\
+32 2 False True g 2\
+32 1 False False b 1\
+32 2 False False b 2\
+32 1 False True b 1\
+32 2 False True b 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1826781690\
+32 1 False False rg 1\
+32 2 False False rg 2\
+32 1 False True rg 1\
+32 2 False True rg 2\
+32 1 False False rb 1\
+32 2 False False rb 2\
+32 1 False True rb 1\
+32 2 False True rb 2\
+32 1 False False gb 1\
+32 2 False False gb 2\
+32 1 False True gb 1\
+32 2 False True gb 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1899527120\
+32 1 False False rgb 2\
+32 1 False True rgb 2\
+32 1 False False r 2\
+32 1 False True r 2\
+32 1 False False g 2\
+32 1 False True g 2\
+32 1 False False b 2\
+32 1 False True b 2\
+32 1 False False rg 2\
+32 1 False True rg 2\
+32 1 False False rb 2\
+32 1 False True rb 2\
+32 1 False False gb 2\
+32 1 False True gb 2\
 \
 \
 **FriendlyPupper**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** Yes\
+*Message Found*\
+32 1 False False rgb 1\
 \
 \
 **Gadget_medium**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 983596868\
+**Args Checked**\
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+32 1 False False r 1\
+32 2 False False r 2\
+32 1 False True r 1\
+32 2 False True r 2\
+32 1 False False g 1\
+32 2 False False g 2\
+32 1 False True g 1\
+32 2 False True g 2\
+32 1 False False b 1\
+32 2 False False b 2\
+32 1 False True b 1\
+32 2 False True b 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 768533538\
+32 1 False False rg 1\
+32 2 False False rg 2\
+32 1 False True rg 1\
+32 2 False True rg 2\
+32 1 False False rb 1\
+32 2 False False rb 2\
+32 1 False True rb 1\
+32 2 False True rb 2\
+32 1 False False bg 1\
+32 2 False False bg 2\
+32 1 False True bg 1\
+32 2 False True bg 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 2581536362\
+32 1 False False rgb 2\
+32 1 False True rgb 2\
+32 1 False False r 2\
+32 1 False True r 2\
+32 1 False False g 2\
+32 1 False True g 2\
+32 1 False False b 2\
+32 1 False True b 2\
+32 1 False False rg 2\
+32 1 False True rg 2\
+32 1 False False rb 2\
+32 1 False True rb 2\
+32 1 False False bg 2\
+32 1 False True bg 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 3106172489\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1203313606\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 764266213\
+32 1 1 rgb False True\
+32 1 1 rgb True True\
+32 1 1 r False True
+32 1 1 r True True
+32 1 1 g False True
+32 1 1 g True True
+32 1 1 b False True
+32 1 1 b True True
+32 1 1 rg False True
+32 1 1 rg True True
+32 1 1 rb False True
+32 1 1 rb True True
+32 1 1 gb False True
+32 1 1 gb True True
 \
 \
 **Gadget_small**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 3363550926\
+**Args Checked**\
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+32 1 False False r 1\
+32 2 False False r 2\
+32 1 False True r 1\
+32 2 False True r 2\
+32 1 False False g 1\
+32 2 False False g 2\
+32 1 False True g 1\
+32 2 False True g 2\
+32 1 False False b 1\
+32 2 False False b 2\
+32 1 False True b 1\
+32 2 False True b 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 1919464815\
+32 1 False False rg 1\
+32 2 False False rg 2\
+32 1 False True rg 1\
+32 2 False True rg 2\
+32 1 False False rb 1\
+32 2 False False rb 2\
+32 1 False True rb 1\
+32 2 False True rb 2\
+32 1 False False bg 1\
+32 2 False False bg 2\
+32 1 False True bg 1\
+32 2 False True bg 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 740987086\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 834083833\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 3749402592\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1874301787\
+32 1 False False rgb 2\
+32 1 False True rgb 2\
+32 1 False False r 2\
+32 1 False True r 2\
+32 1 False False g 2\
+32 1 False True g 2\
+32 1 False False b 2\
+32 1 False True b 2\
+32 1 False False rg 2\
+32 1 False True rg 2\
+32 1 False False rb 2\
+32 1 False True rb 2\
+32 1 False False bg 2\
+32 1 False True bg 2\
 \
 \
 **Gadget_tiny**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 1149507196\
+**Args Checked**\
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+32 1 False False r 1\
+32 2 False False r 2\
+32 1 False True r 1\
+32 2 False True r 2\
+32 1 False False g 1\
+32 2 False False g 2\
+32 1 False True g 1\
+32 2 False True g 2\
+32 1 False False b 1\
+32 2 False False b 2\
+32 1 False True b 1\
+32 2 False True b 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 2551890578\
+32 1 False False rg 1\
+32 2 False False rg 2\
+32 1 False True rg 1\
+32 2 False True rg 2\
+32 1 False False rb 1\
+32 2 False False rb 2\
+32 1 False True rb 1\
+32 2 False True rb 2\
+32 1 False False bg 1\
+32 2 False False bg 2\
+32 1 False True bg 1\
+32 2 False True bg 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 3343405810\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1920855746\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 3589799890\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 1213382735\
+32 1 False False rgb 2\
+32 1 False True rgb 2\
+32 1 False False r 2\
+32 1 False True r 2\
+32 1 False False g 2\
+32 1 False True g 2\
+32 1 False False b 2\
+32 1 False True b 2\
+32 1 False False rg 2\
+32 1 False True rg 2\
+32 1 False False rb 2\
+32 1 False True rb 2\
+32 1 False False bg 2\
+32 1 False True bg 2\
 \
 \
 **Gadget**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 991866872\
+**Args Checked**\
+32 1 False False rgb 1\
+32 2 False False rgb 2\
+32 1 False True rgb 1\
+32 2 False True rgb 2\
+32 1 False False r 1\
+32 2 False False r 2\
+32 1 False True r 1\
+32 2 False True r 2\
+32 1 False False g 1\
+32 2 False False g 2\
+32 1 False True g 1\
+32 2 False True g 2\
+32 1 False False b 1\
+32 2 False False b 2\
+32 1 False True b 1\
+32 2 False True b 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 795713876\
+32 1 False False rg 1\
+32 2 False False rg 2\
+32 1 False True rg 1\
+32 2 False True rg 2\
+32 1 False False rb 1\
+32 2 False False rb 2\
+32 1 False True rb 1\
+32 2 False True rb 2\
+32 1 False False bg 1\
+32 2 False False bg 2\
+32 1 False True bg 1\
+32 2 False True bg 2\
 
-**Args used** *header_size:* 32 *num_sig_bits:* 3 *skip_1000:* False\
-**Meaningful Output?** No\
-**Message Length?** 2582886872\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 4266579968\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 545389899\
-
-**Args used** *header_size:* 32 *num_sig_bits:* 2 *skip_1000:* True\
-**Meaningful Output?** No\
-**Message Length?** 2257339939\
+32 1 False False rgb 2\
+32 1 False True rgb 2\
+32 1 False False r 2\
+32 1 False True r 2\
+32 1 False False g 2\
+32 1 False True g 2\
+32 1 False False b 2\
+32 1 False True b 2\
+32 1 False False rg 2\
+32 1 False True rg 2\
+32 1 False False rb 2\
+32 1 False True rb 2\
+32 1 False False bg 2\
+32 1 False True bg 2\
 \
 \
 **GadgetRadiator**\
 \
 \
 **Grooming**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
-**Channels** Only blue\
-**Meaningful Output?** Yes\
+*Message Found*\
+32 1 False False b 1\
 \
 \
 **LastBastionOfRadiance**\
-IMAGE FOUND??\
-The image found hides a second image\
-That second image has a message hidden as follows:\
+*Image Found*\
+32 1 False True rgb 1\
 \
 \
 **MoJoJoJoCouch**\
+*Image Found*\
+32 1 False False rgb 1 True
 \
 \
 **PupFriends**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
-**Channels** All\
-**Meaningful Output?** Yes\
+*Message Found*\
+32 1 False False rgb 1\
 \
 \
 **PuppyLeash**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
-**Channels** All\
-**Meaningful Output?** Yes\
+*Message Found*\
+32 1 False False rgb 1\
 \
 \
 **StegTest**\
 \
 \
 **TheGrassIsGreener**\
+*Image Found*
+32 1 1 rgb False True
 \
 \
 **TripleThreat**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* True\
-**Channels** All\
-**Meaningful Output?** Yes\
+*Message Found*\
+32 1 False True rgb 1\
 \
 \
 **WideDogIsWide**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
-**Channels** All\
-**Meaningful Output?** Yes\
+*Message Found*\
+32 1 False False rgb 1\
 \
 \
 **WinkyFace**\
-IMAGE FOUND\
+*Image Found*\
+32 2 False False rgb 2\
 \
 \
 **Woof1**\
-**Args used** *header_size:* 32 *num_sig_bits:* 1 *uses_alpha* False *skip_1000:* False\
-**Channels** Only red\
-**Meaningful Output?** Yes\
+*Message Found*\
+32 1 False False r 1\
 
 
 ## For Images

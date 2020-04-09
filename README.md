@@ -2,7 +2,8 @@
 
 ## Files that use the alpha channel
 Brothers\
-Grooming TheGrassIsGreener\
+Grooming \
+TheGrassIsGreener\
 WideDogIsWide\
 WinkyFace
 
@@ -17,24 +18,33 @@ GadgetRadiator to Woof1
 ## Questions:
 
 1. The other day I decided to clean my bedsheets for the first time in a long time. I found this bizarre implement under my pillow. Why is it there?\
-So as not to be a fool on the one night it is needed.
+So as not to be a fool on the one night it is needed
 
 2. Who’s Scruffy?\
-A blind and deaf bomb sniffing dog who doesn't smell well
+A blind and deaf bomb sniffing dog who doesn't smell very well
 
 3. Should I read the Tao Te Ching, or the Art of War?
+
 4. I have memories of having a talking shed. What was its name?\
 John
 
 5. Could anyone have seen the bitcoin boom coming?
+
 6. For as long as I can remember, I’ve been nervous when I’m near a merry-go-round if I have a bottle of water with me. Why is that?\
 If you spin a glass of water the oxygen will be disproportionately pulled to the outside. If you spin it enough, the oxygen will separate from the hydrogen and then you've made myself a bomb.
 
 7. I find myself with an excess of birds and a shortage of stones, what should I do?
+
 8. My friend (Ava, Zoey, Vivian, Eve,  Aisha, or Chaim, I don’t remember which) gave me some lemons. What should I do?
+Throw those lemons on the ground and refuse to leave until you get the damned limes you asked for the in first place.
+
 9. Did Young Scott see COVID-19 coming?
-10. Do I really need anything more than spellcheck in any circumstance?
+
+10. Do I really need anything more than spellcheck in any circumstance?\
+Yes. Spellcheck is not enough when ordering form a general-purpose delivery company.
+
 11. Why haven’t we unlocked all the mysteries of the ocean?
+
 12. Did Young Scott leave any red herrings?\
 Yes
 
@@ -55,6 +65,11 @@ Ehh, I'm not going to write them down. This information probably wouldn't intere
 The next sentence is true.\
 The previous sentence is false.\
 The previous two sentences are absolute nonsense.\
+\
+Wisdom borrowed from Uncle Jimmy.\
+When life gives you lemons:\
+Throw those lemons on the ground, spit in life's eye, and refuse to leave until you get the damned limes you asked for the in first place.\
+\
 
 
 ## Messages Found
@@ -101,16 +116,26 @@ Give a man a fish, you feed him for a day.\
 Give a fish a man, it'll eat for weeks.\
 \
 \
+**File Name:** AlbumCover\
+**Message**\
+Spellcheck is not enough when ordering from a general-purpose delivery company.\
+Learned when I had to fix a circuit board with some smoldering iron.\
+\
+\
+**File Name:** DogDog\
+**Message**\
+Wisdom borrowed from Uncle Jimmy.\
+When life gives you lemons:\
+Throw those lemons on the ground, spit in life's eye, and refuse to leave until you get the damned limes you asked for the in first place.\
+
 **File Name:** LastBastionOfRadiance\
 **Message**\
-
+the scruffy one
 
 
 ## Images Found
 **File Name:** WinkyFace\
 \
-**File Name:** LastBastionOfRadiance\
-
 
 
 ## What Can Be Done?
